@@ -10,4 +10,7 @@ class HomeworkSequenceFunctions(unittest.TestCase):
         pass
 
     def test_exponentiate(self):
-        self.assertTrue(False)
+        expected = [1,2,4,8,16,32,64,128,256]
+        actual = Homework.power_of_two(9)
+        self.assertEqual(expected,actual)
+        
