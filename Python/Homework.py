@@ -23,3 +23,8 @@ def distinct_numbers(sequence):
             return True
         else: 
             return False
+
+#This function returns the characters of the alphabet in a list.
+def alphabet():
+    str = 'abcdefghijklmnopqrstuvwxyz'
+    return [letter for letter in str]

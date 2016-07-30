@@ -22,3 +22,11 @@ class HomeworkSequenceFunctions(unittest.TestCase):
         actual = Homework.distinct_numbers([1,2,3,4,5]) 
         self.assertEqual(expected,actual)
 
+    def test_alphabet(self):
+        expected = ['a','b','c','d','e','f','g','h','i','j',
+                    'k','l','m','n','o','p','q','r','s','t',
+                    'u','v','w','x','y','z']
+        actual = Homework.alphabet()
+        self.assertEqual(expected,actual)
+
+
