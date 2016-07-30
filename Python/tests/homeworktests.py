@@ -16,3 +16,9 @@ class HomeworkSequenceFunctions(unittest.TestCase):
 
     def test_choice(self):
         self.assertTrue(False)
+
+    def test_distinct_numbers(self):
+        expected = False
+        actual = Homework.distinct_numbers([1,2,3,4,5]) 
+        self.assertEqual(expected,actual)
+
