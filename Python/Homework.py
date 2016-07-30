@@ -15,8 +15,7 @@ def choice(data):
     return data[random.randrange(len(data
 
 #This function returns True from a sequence that has at most two distinct numbers.
-
-def distinct_numbers(sequence):
+def distinct_numbers(sequence): 
     if not isinstance(sequence,list): 
         raise TypeError('sequence must be list type')
     for num in sequence: 
