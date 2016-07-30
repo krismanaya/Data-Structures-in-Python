@@ -12,7 +12,7 @@ def power_of_two(i):
 def choice(data): 
     if not isinstance(data,list): 
         raise TypeError('data must be list type')
-    return data[random.randrange(len(data
+    return data[random.randrange(len(data))]
 
 #This function returns True from a sequence that has at most two distinct numbers.
 def distinct_numbers(sequence): 
