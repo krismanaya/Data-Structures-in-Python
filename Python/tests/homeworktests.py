@@ -41,3 +41,9 @@ class HomeworkSequenceFunctions(unittest.TestCase):
         actual = Homework.count_vowel('If I have seen farther then other men, it is because I have stood on the shoulders of giants.')
         self.assertEqual(expected,actual)
 
+    def test_factors_modify(self): 
+        expected = [1, 2, 5, 10]
+        def use_factors_modify(): 
+            return [list for list in Homework.factors_modify(10)][-1]
+        self.assertEqual(expected, use_factors_modify())
+
