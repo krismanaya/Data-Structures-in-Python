@@ -36,4 +36,8 @@ class HomeworkSequenceFunctions(unittest.TestCase):
         actual = Homework.alphabet()
         self.assertEqual(expected,actual)
 
+    def test_count_vowel(self): 
+        expected = 31
+        actual = Homework.count_vowel('If I have seen farther then other men, it is because I have stood on the shoulders of giants.')
+        self.assertEqual(expected,actual)
 

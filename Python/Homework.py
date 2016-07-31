@@ -17,6 +17,15 @@ def distinct_numbers(sequence):
             return False
     return True  
 
-#T# C-1.19: This function returns the characters of the alphabet in a list.
+## C-1.19: This function returns the characters of the alphabet in a list.
 def alphabet():
     return [chr(letter) for letter in range(97,123)]
+
+## C-1.24: This function returns the number of vowels in a string. 
+def count_vowel(str): 
+    vowel = 'aeiouAEIOU'
+    num = []
+    for letter in vowel:
+        if letter in str:
+            num.append(str.count(letter))
+    return sum(num)
