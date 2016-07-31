@@ -18,9 +18,16 @@ class HomeworkSequenceFunctions(unittest.TestCase):
         self.assertTrue(False)
 
     def test_distinct_numbers(self):
-        expected = False
+        expected = True
         actual = Homework.distinct_numbers([1,2,3,4,5]) 
         self.assertEqual(expected,actual)
+        expected_1 = False 
+        actual = Homework.distinct_numbers([1,1,2,3,4,5])
+        self.assertEqual(expected_1,actual)
+        expected_2 = False 
+        actual = Homework.distinct_numbers([1,2,2,3,4,5])
+        self.assertEqual(expected_2,actual)
+
 
     def test_alphabet(self):
         expected = ['a','b','c','d','e','f','g','h','i','j',
