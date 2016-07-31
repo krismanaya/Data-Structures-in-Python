@@ -21,6 +21,10 @@ def distinct_numbers(sequence):
 def alphabet():
     return [chr(letter) for letter in range(97,123)]
 
+## C-1.20: This function shuffles a list of numbers. 
+def shuffle(data): 
+    return [random.randint(data[0],data[len(data)-1]) for i in range(0,len(data)) if data[i] == data[i]]
+
 ## C-1.24: This function returns the number of vowels in a string. 
 def count_vowel(str): 
     vowel = 'aeiouAEIOU'
