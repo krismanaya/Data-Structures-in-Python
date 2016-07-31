@@ -24,8 +24,4 @@ def alphabet():
 ## C-1.24: This function returns the number of vowels in a string. 
 def count_vowel(str): 
     vowel = 'aeiouAEIOU'
-    num = []
-    for letter in vowel:
-        if letter in str:
-            num.append(str.count(letter))
-    return sum(num)
+    return sum([str.count(letter) for letter in vowel if letter in str])
