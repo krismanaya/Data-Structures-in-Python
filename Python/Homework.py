@@ -19,5 +19,4 @@ def distinct_numbers(sequence):
 
 #T# C-1.19: This function returns the characters of the alphabet in a list.
 def alphabet():
-    str = 'abcdefghijklmnopqrstuvwxyz'
-    return [letter for letter in str]
+    return [chr(letter) for letter in range(97,123)]
