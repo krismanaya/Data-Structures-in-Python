@@ -30,17 +30,19 @@ def count_vowel(str):
     vowel = 'aeiouAEIOU'
     return sum([str.count(letter) for letter in vowel if letter in str])
 
-## C-1.27: This function is a modified function of factors from page 41 in the book 
-def factors_modify(n): 
+## C-1.27: This function is a modified function of factors from page 41 in the book. 
+def factors(n): 
     k = 1
-    list = []
     while k*k < n: 
         if n % k == 0:
-            list.append(k)
-            list.append(n // k)
-            yield list 
-            yield list
+            yield k
         k += 1
-        if k*k == n:
-            list.append(k)
-    yield sorted(list)
+    if k*k == n:
+        yield k
+    k = k-1
+    while k >= 1:
+        if n % k == 0:
+            yield n // k
+        k -= 1
+        
+        
