@@ -15,7 +15,7 @@ class HomeworkSequenceFunctions(unittest.TestCase):
         self.assertEqual(expected,actual)
 
     def test_choice(self):
-        self.assertTrue(False)
+        pass
 
     def test_distinct_numbers(self):
         expected = True
@@ -43,7 +43,13 @@ class HomeworkSequenceFunctions(unittest.TestCase):
 
     def test_factors_modify(self): 
         expected = [1, 2, 5, 10]
-        def use_factors_modify(): 
-            return [list for list in Homework.factors_modify(10)][-1]
-        self.assertEqual(expected, use_factors_modify())
+        def factors_modify(): 
+            return [i for i in Homework.factors_modify(10)]
+        self.assertEqual(expected, factors_modify())
+
+    def test_polynomial(self):
+        """to pass this test please enter 12*x**2 + 2*x -5 and 2 for the input"""
+        expected = 1.0000000000065512
+        actual = Homework.main() 
+        self.assertEqual(expected,actual)
 

@@ -1,4 +1,5 @@
 import random
+import math 
 
 ## Section 1 ##
 
@@ -31,7 +32,7 @@ def count_vowel(str):
     return sum([str.count(letter) for letter in vowel if letter in str])
 
 ## C-1.27: This function is a modified function of factors from page 41 in the book. 
-def factors(n): 
+def factors_modify(n): 
     k = 1
     while k*k < n: 
         if n % k == 0:
@@ -45,4 +46,24 @@ def factors(n):
             yield n // k
         k -= 1
         
-        
+class Derivative:
+    
+    def __init__(self,f,h = 1E-5): 
+        self.f = f
+        self.h = float(h)
+    
+    def __call__(self,x): 
+        f,h = self.f,self.h
+        return (f(x+h)-f(x))/h
+
+def main():
+    df = Derivative(f)
+    x = raw_input("please enter a polynomial: ")
+    f(x)
+    x = int(input("please enter the input for f(x):"))
+    return df(x)
+
+def f(x): 
+    return x
+
+
