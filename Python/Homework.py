@@ -45,8 +45,11 @@ def factors_modify(n):
         if n % k == 0:
             yield n // k
         k -= 1
-        
+  
+## P-2.33        
 class Derivative:
+    """This class creates a function f and then derives that function 
+    using the f(x) method at the bottom """ 
     
     def __init__(self,f,h = 1E-5): 
         self.f = f
@@ -56,14 +59,20 @@ class Derivative:
         f,h = self.f,self.h
         return (f(x+h)-f(x))/h
 
+def f(x): 
+    """this creates the polynomial f for our derivative class."""
+    return x
+
 def main():
+    """This asks the user to input any polynomial of degree n and 
+    then calls the class to return its derivative for the choice of small epsilon."""
+
     df = Derivative(f)
     x = raw_input("please enter a polynomial: ")
     f(x)
     x = int(input("please enter the input for f(x):"))
     return df(x)
 
-def f(x): 
-    return x
+
 
 
