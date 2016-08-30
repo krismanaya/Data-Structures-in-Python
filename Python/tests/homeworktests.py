@@ -53,3 +53,10 @@ class HomeworkSequenceFunctions(unittest.TestCase):
         actual = Homework.main() 
         self.assertEqual(expected,actual)
 
+    def test_split_file(self): 
+        expected = {'a': 17,'b': 2,'c': 7,'d': 3,'e': 12,'f': 3,
+                    'g': 1, 'h': 10,'i': 4,'j': 0, 'k': 0,'l': 2,'m': 3,'n': 8,
+                    'o': 8, 'p': 8, 'q': 1,'r': 9,'s': 4,'t': 18,
+                    'u': 6,'v':0,'w': 1,'x':0,'y': 1,'z':0}
+        actual = Homework.split_file()
+        self.assertEqual(expected,actual)

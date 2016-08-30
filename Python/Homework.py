@@ -1,5 +1,8 @@
 import random
 import math 
+import pandas
+from collections import Counter
+
 
 ## Section 1 ##
 
@@ -73,6 +76,31 @@ def main():
     x = int(input("please enter the input for f(x):"))
     return df(x)
 
+
+## p-2.34 xs
+def split_file():
+    """This function takes a document, parses the letters and returns 
+    the frequency of the letter in a histogram."""
+    l = []
+    d = dict()
+    with open('p-2.34.txt', 'r') as f: 
+        data = f.readlines()
+        for line in data: 
+            words = line.split()
+            for list in words: 
+                for letter in list:
+                    lower_letter = letter.lower()
+                    l.append(lower_letter)
+        
+    for key in alphabet(): 
+        new_value = l.count(key)
+        d[key] = new_value
+    return d
+
+# l = split_file()
+# letter_counts = Counter(l)
+# df = pandas.DataFrame.from_dict(letter_counts, orient ='index')
+# df.plot(kind='bar')
 
 
 
